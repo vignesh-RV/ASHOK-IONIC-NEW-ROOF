@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-back-button text="back" icon="add"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Notification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div style="justify-content: center;text-align: center; margin-top: 50%;" [hidden]=ishidden>
+      <img style="width: 20%;" src="assets/images/alarm.png">
+      <h1>No new notification</h1>
+  </div>
+
+  <ion-list *ngFor="let notification of notifications; index as i">
+  <ion-item>
+    <span class="o-media__img u-mr-xsmall">
+      <span class="c-avatar c-avatar--xsmall">
+          <span class="c-avatar__img u-bg-success u-flex u-justify-center u-align-items-center">
+              <i class="fa fa-check u-text-large u-color-white"></i>
+          </span>
+      </span>
+      
+  </span>
+  <h6 class="u-mb-zero">{{ notification.message }}</h6>
+  </ion-item>
+  </ion-list>
+</ion-content>

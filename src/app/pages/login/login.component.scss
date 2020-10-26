@@ -1,0 +1,70 @@
+#login-page-container{
+    margin: 0 1.2rem;
+    .btn-control-separator{
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        &::before, &::after{
+            width: 30%;
+            background-color: #000;
+            height: 2px;
+            display: inline-flex;
+            content: '';
+        }
+        &::before{
+            margin-right: 5px;
+        }
+        &::after{
+            margin-left: 5px;
+        }
+    }
+
+    .login-page-footer{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        .links{
+            color: #7f8fa4 !important;
+        }
+    }
+
+    .mat-card{
+        padding: 0 0 16px;
+        ::ng-deep{
+            .mat-card-header-text{
+                margin: 0;
+                width: 100%;
+                .mat-card-title{
+                    padding: 1.5625rem 1.875rem;
+                    border-bottom: 1px solid #e6eaee;
+                    background-color: #fafbfc;
+                    text-align: center;
+                }
+            }
+        }
+        .mat-card-content{
+            padding: 10px;
+        }
+
+        .mat-card-title{
+            padding: 1.5625rem 1.875rem;
+            border-bottom: 1px solid #e6eaee;
+            background-color: #fafbfc;
+        }
+    }
+
+    .login-btn-controls{
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+#app-theme-container{
+    margin: 1rem;
+    h4{
+        text-align: center;
+        line-height: 1.3;
+        margin-top: 1.2rem;
+    }
+}
