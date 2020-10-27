@@ -1,5 +1,7 @@
 {
   "name": "roof-diagram",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
