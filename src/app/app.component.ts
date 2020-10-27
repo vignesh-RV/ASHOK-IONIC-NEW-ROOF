@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthService } from './services/auth.service';
 import { CommonService } from './services/common.service';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -31,13 +32,19 @@ export class AppComponent implements OnInit {
     }
   ]
 
+  get currentUser(): any{
+    let userData = this.auth.getUserData();
+    return userData ? userData.user : {};
+  }
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private auth: AuthService,
     private sideMenuCtrolr: MenuController,
-    private common: CommonService
+    private common: CommonService,
+    private router: Router
   ) {
     this.initializeApp();
   }
@@ -47,6 +54,12 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    this.router.events.subscribe((rEvt: RouterEvent)=>{
+      if(rEvt instanceof NavigationEnd){
+        this.selectedIndex = this.appPages.findIndex((page)=> page.url.includes( rEvt.url ) );
+      }
+    })
   }
 
   ngOnInit() {

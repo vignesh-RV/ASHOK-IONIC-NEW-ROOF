@@ -18,11 +18,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoginComponent } from './pages/login/login.component';
 import { AppMaterialModules } from './shared/modules/app.material.module';
+import { NotificationPage } from './pages/notification/notification.page';
+import { PurchaseComponent } from './pages/purchase/purchase.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NotificationPage,
+    PurchaseComponent
   ],
   entryComponents: [],
   imports: [

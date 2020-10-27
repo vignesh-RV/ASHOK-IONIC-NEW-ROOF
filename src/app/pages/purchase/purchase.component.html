@@ -4,7 +4,10 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-        <ion-back-button text="back" icon="add"></ion-back-button>
+        <ion-button [routerLink]="'/projects'">
+          <ion-icon class="mr-1" name="arrow-back"></ion-icon>
+          back
+        </ion-button>
     </ion-buttons>
     <ion-title>Purchase</ion-title>
   </ion-toolbar>
