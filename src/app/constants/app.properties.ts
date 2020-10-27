@@ -1,8 +1,8 @@
 export const APP_DATA = {
   TOKEN_EXPIRE_TIME: 3600,
   ROLE_USER_ID: 3,
-  GMAP_IMAGE_URL: 'https://maps.googleapis.com/maps/api/staticmap?center=${location}&zoom=20&size=400x400&markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&key=AIzaSyAZGY0jZI_i8DwxIZFmNaG86RWUtAgoX94',
-  GMAP_USER_KEY: 'AIzaSyAZGY0jZI_i8DwxIZFmNaG86RWUtAgoX94',
+  GMAP_IMAGE_URL: 'https://maps.googleapis.com/maps/api/staticmap?center=${location}&zoom=20&size=400x400&markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&key=XXX',
+  GMAP_USER_KEY: 'XXX',
 
   TOASTER_DEFAULTS: {
     timeOut: 10000,
